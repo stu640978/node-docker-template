@@ -1,0 +1,10 @@
+services:
+  nodejs:
+    image: node:${NODE_VERSION}
+    container_name: nodejs_${NODE_VERSION}
+    volumes:
+      - ./projects:/app
+      - ./entrypoint:/entrypoint
+    entrypoint: /bin/sh
+    command: /entrypoint/entrypoint.sh
+    
