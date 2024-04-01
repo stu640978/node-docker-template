@@ -57,4 +57,12 @@ node-docker-template
     },
   });
   ```
-- Webpack 專案目前尚未測試
+- Webpack 專案經過測試需修改 `webpack.config.js` 中的`watchOptions`設定，才能正常抓到檔案更新
+  ```js
+  module.exports = {
+    //...
+    watchOptions: {
+      poll: true,
+    },
+  };
+  ```
