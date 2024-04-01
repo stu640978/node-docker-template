@@ -20,23 +20,23 @@ node-docker-template
     └─project2 # 專案2
 ```
 
-#### PreRequirements
+#### Prerequisites
 
-- 安裝 Docker 或者 Podman
-- 安裝及配置好 Docker Compose 或者 Podman Compose
+- 安裝 `Docker` 或 `Podman`
+- 安裝及配置好 `Docker Compose` 或 `Podman Compose`
 
 #### Usage
 
 1. Clone 或下載此專案
 2. (可選)更改資料夾名稱為所要使用的 Node 版本，方便後面辨別
-3. 更改.env 檔案中的 NODE_VERSION 為所要使用的 Node 版本
+3. 更改 `.env` 檔案中的 `NODE_VERSION` 為所要使用的 Node 版本
 
    - 可參考[NodeJS Docker Hub](https://hub.docker.com/_/node)查看可用版本 Tag
 
-4. (可選)更改.env 檔案中 PACKAGE_MANAGER 為所要使用的套件管理工具
+4. (可選)更改 `.env` 檔案中 `PACKAGE_MANAGER` 為所要使用的套件管理工具
 
-   - 預設包管理器為 npm
-   - 目前可選包管理器有 yarn, pnpm
+   - 預設包管理器為 `npm`
+   - 目前可選包管理器有 `yarn`, `pnpm`
    - 如果需要使用其他的套件管理工具，請自行修改 `entrypoint/entrypoint.sh`
 
 5. 將專案放入 `projects` 資料夾中
@@ -47,7 +47,7 @@ node-docker-template
 #### Note
 
 - 預設將專案目錄掛載到容器中的`/app`目錄下
-- Vite 專案經過測試需修改 vite.config.js 中的`usePolling`設定，才能正常抓到檔案更新
+- Vite 專案經過測試需修改 `vite.config.js` 中的`usePolling`設定，才能正常抓到檔案更新
   ```js
   export default defineConfig({
     server: {
@@ -57,4 +57,4 @@ node-docker-template
     },
   });
   ```
-- webpack 專案目前尚未測試
+- Webpack 專案目前尚未測試
