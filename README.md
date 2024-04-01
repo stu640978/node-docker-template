@@ -39,8 +39,8 @@ node-docker-template
    - 目前可選包管理器有 `yarn`, `pnpm`
    - 如果需要使用其他的套件管理工具，請自行修改 `entrypoint/entrypoint.sh`
 
-5. 將專案放入 `projects` 資料夾中
-6. 在專案目錄中執行`docker compose up -d`
+5. 將開發專案放入 `projects` 資料夾中
+6. 在 `node-docker-template` 專案目錄中執行`docker compose up -d`
 7. 進入容器中`/app`目錄下執行`npm install`或`yarn install`安裝套件
 8. 開始開發
 
